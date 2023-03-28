@@ -3,11 +3,12 @@ package personnages;
 public class Humain {
 	private String nom;
 	private String boisson;
-	private int capital;
+	protected int capital;
 	
-	public Humain(String nom, String boisson) {
+	public Humain(String nom, String boisson, int capital) {
 		this.nom = nom;
 		this.boisson = boisson;
+		this.capital = capital;
 	}
 	
 	public String getNom() {
@@ -18,9 +19,12 @@ public class Humain {
 		System.out.println("("+ nom +") - " + texte);
 	}
 	
+	public int getCapital() {
+		return capital;
+	}
 	
 	public void direBonjour() {
-		parler("Bonjour! Je m'appelle " + nom + " et j'aime bien boire " + boisson);
+		parler("Bonjour! Je m'appelle " + nom + " et j'aime boire " + boisson);
 	}
 	
 	public void boire() {
